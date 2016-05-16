@@ -1,0 +1,13 @@
+<%= simple_form_for @cat, :html => { :multipart => true }  do |f| %>
+<%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select a category") %>
+<%= f.input :name, label: "Cat's Name" %>
+<%= f.input :color, label: "Color of the Cat" %>
+<%= f.input :race, label: "Race of the Cat" %>
+<%= f.input :gender, label: "Gender of the Cat: Male/Female" %>
+<%= f.input :description, label: "Description of the Cat" %>
+<%= f.file_field :cat_img %>
+<%= f.button :submit %>
+
+<% end %>
+
+

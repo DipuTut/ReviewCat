@@ -1,0 +1,15 @@
+<h1>Edit Cat</h1>
+
+<%# render 'form' %>
+
+<%= simple_form_for @cat, :html => { :multipart => true } do |f| %>
+<%= f.select :category_id, @categories %>
+<%= f.input :name, label: "Cat's Name" %>
+<%= f.input :color, label: "Color of the Cat" %>
+<%= f.input :race, label: "Race of the Cat" %>
+<%= f.input :gender, label: "Gender of the Cat: Male/Female" %>
+<%= f.input :description, label: "Description of the Cat" %>
+<%= f.file_field :cat_img %>
+<%= f.button :submit %>
+
+<% end %>
